@@ -1,4 +1,3 @@
-# Krunker.js 
 [![npm downloads](https://img.shields.io/npm/dt/krunker.js.svg?maxAge=3600)](https://www.npmjs.com/package/krunker.js) [![Dependencies](https://img.shields.io/david/xazgg/krunker.js.svg?maxAge=3600)](https://david-dm.org/xazgg/krunker.js.svg) [![RunKit](https://badge.runkitcdn.com/krunker.js.svg)](https://npm.runkit.com/krunker.js) [![NPM Version](https://img.shields.io/npm/v/krunker.js.svg?maxAge=3600)](https://www.npmjs.com/package/krunker.js)
 
 <div align="center">
