@@ -8,8 +8,8 @@
   <p>
     <a href="https://nodei.co/npm/krunker.js/"><img src="https://nodei.co/npm/krunker.js.png?downloads=true&stars=true" alt="npm installnfo" /></a>
   </p>
-	[![npm downloads](https://img.shields.io/npm/dt/krunker.js.svg?maxAge=3600)](https://www.npmjs.com/package/krunker.js) [![Dependencies](https://img.shields.io/david/xazgg/krunker.js.svg?maxAge=3600)](https://david-dm.org/xazgg/krunker.js.svg) [![RunKit](https://badge.runkitcdn.com/krunker.js.svg)](https://npm.runkit.com/krunker.js) [![NPM Version](https://img.shields.io/npm/v/krunker.js.svg?maxAge=3600)](https://www.npmjs.com/package/krunker.js)
 </div>
+[![npm downloads](https://img.shields.io/npm/dt/krunker.js.svg?maxAge=3600)](https://www.npmjs.com/package/krunker.js) [![Dependencies](https://img.shields.io/david/xazgg/krunker.js.svg?maxAge=3600)](https://david-dm.org/xazgg/krunker.js.svg) [![RunKit](https://badge.runkitcdn.com/krunker.js.svg)](https://npm.runkit.com/krunker.js) [![NPM Version](https://img.shields.io/npm/v/krunker.js.svg?maxAge=3600)](https://www.npmjs.com/package/krunker.js)
 
 ###### [GitHub](https://github.com/xAzz) | [Discord](https://discord.gg/wB3P92h)
 
