@@ -1,0 +1,20 @@
+{
+	"name": "krunker.js",
+	"version": "1.1.7",
+	"description": "Krunker.io Social Page API",
+	"main": "index.js",
+	"scripts": {
+		"test": "node index.js"
+	},
+	"keywords": [
+		"krunker.js",
+		"krunker.io",
+		"krunker"
+	],
+	"author": "xAz",
+	"license": "ISC",
+	"dependencies": {
+		"msgpack-lite": "^0.1.26",
+		"ws": "^6.1.0"
+	}
+}
