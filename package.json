@@ -4,7 +4,7 @@
 	"description": "Krunker.io Social Page API",
 	"main": "index.js",
 	"scripts": {
-		"test": "node index.js"
+		"test": "npm install && node index.js"
 	},
 	"keywords": [
 		"krunker.js",
