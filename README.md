@@ -7,8 +7,8 @@
   <p>
     <a href="https://www.npmjs.com/package/krunker.js"><img src="https://img.shields.io/npm/v/krunker.js.svg?maxAge=3600" alt="NPM version" /></a>
     <a href="https://www.npmjs.com/package/krunker.js"><img src="https://img.shields.io/npm/dt/krunker.js.svg?maxAge=3600" alt="NPM downloads" /></a>
-    <a href="https://travis-ci.org/xAzz/krunker.js"><img src="https://travis-ci.org/xAzz/krunker.js.svg" alt="Build status" /></a>
     <a href="https://david-dm.org/xAzz/krunker.js"><img src="https://img.shields.io/david/xAzz/krunker.js.svg?maxAge=3600" alt="Dependencies" /></a>
+    <a href="https://travis-ci.org/xAzz/krunker.js"><img src="https://travis-ci.org/xAzz/krunker.js.svg" alt="Build status" /></a>
   </p>
   <p>
     <a href="https://nodei.co/npm/krunker.js/"><img src="https://nodei.co/npm/krunker.js.png?downloads=true&stars=true" alt="npm installnfo" /></a>
