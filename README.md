@@ -1,12 +1,15 @@
-# Krunker.js 
-[![npm downloads](https://img.shields.io/npm/dt/krunker.js.svg?maxAge=3600)](https://www.npmjs.com/package/krunker.js) [![Dependencies](https://img.shields.io/david/xazgg/krunker.js.svg?maxAge=3600)](https://david-dm.org/xazgg/krunker.js.svg) [![RunKit](https://badge.runkitcdn.com/krunker.js.svg)](https://npm.runkit.com/krunker.js) [![NPM Version](https://img.shields.io/npm/v/krunker.js.svg?maxAge=3600)](https://www.npmjs.com/package/krunker.js)
-
 <div align="center">
   <br />
   <p>
     <a href="https://krunker.io"><img src="https://i.imgur.com/qvTc8OA.png" width="546" alt="Krunker.js" /></a>
   </p>
   <br />
+  <p>
+    <a href="https://www.npmjs.com/package/krunker.js"><img src="https://img.shields.io/npm/v/krunker.js.svg?maxAge=3600" alt="NPM version" /></a>
+    <a href="https://www.npmjs.com/package/krunker.js"><img src="https://img.shields.io/npm/dt/krunker.js.svg?maxAge=3600" alt="NPM downloads" /></a>
+    <a href="https://travis-ci.org/xazgg/krunker.js"><img src="https://travis-ci.org/xazgg/krunker.js.svg" alt="Build status" /></a>
+    <a href="https://david-dm.org/xazgg/krunker.js"><img src="https://img.shields.io/david/xazgg/krunker.js.svg?maxAge=3600" alt="Dependencies" /></a>
+  </p>
   <p>
     <a href="https://nodei.co/npm/krunker.js/"><img src="https://nodei.co/npm/krunker.js.png?downloads=true&stars=true" alt="npm installnfo" /></a>
   </p>
