@@ -1,18 +1,28 @@
 <div align="center">
-  <br />
-  <p>
-    <a href="https://krunker.io"><img src="https://i.imgur.com/qvTc8OA.png" width="546" alt="Krunker.js" /></a>
-  </p>
-  <br />
-  <p>
-    <a href="https://www.npmjs.com/package/krunker.js"><img src="https://img.shields.io/npm/v/krunker.js.svg?maxAge=3600" alt="NPM version" /></a>
-    <a href="https://www.npmjs.com/package/krunker.js"><img src="https://img.shields.io/npm/dt/krunker.js.svg?maxAge=3600" alt="NPM downloads" /></a>
-    <a href="https://david-dm.org/xAzz/krunker.js"><img src="https://img.shields.io/david/xAzz/krunker.js.svg?maxAge=3600" alt="Dependencies" /></a>
-    <a href="https://travis-ci.org/xAzz/krunker.js"><img src="https://travis-ci.org/xAzz/krunker.js.svg" alt="Build status" /></a>
-  </p>
-  <p>
-    <a href="https://nodei.co/npm/krunker.js/"><img src="https://nodei.co/npm/krunker.js.png?downloads=true&stars=true" alt="npm installnfo" /></a>
-  </p>
+	<br>
+  	<p>
+		<a href="https://krunker.io"><img src="https://i.imgur.com/qvTc8OA.png" width="546" alt="Krunker.js"></a>
+  	</p>
+  	<br>
+  	<p>
+		<a href="https://www.npmjs.com/package/krunker.js">
+			<img src="https://img.shields.io/npm/v/krunker.js.svg?maxAge=3600" alt="NPM version">
+		</a>
+		<a href="https://www.npmjs.com/package/krunker.js">
+			<img src="https://img.shields.io/npm/dt/krunker.js.svg?maxAge=3600" alt="NPM downloads">
+		</a>
+		<a href="https://david-dm.org/xAzz/krunker.js">
+			<img src="https://img.shields.io/david/xAzz/krunker.js.svg?maxAge=3600" alt="Dependencies">
+		</a>
+		<a href="https://travis-ci.org/xAzz/krunker.js">
+			<img src="https://travis-ci.org/xAzz/krunker.js.svg" alt="Build status">
+		</a>
+	</p>
+  	<p>
+		<a href="https://nodei.co/npm/krunker.js/">
+			<img src="https://nodei.co/npm/krunker.js.png?downloads=true&stars=true" alt="npm installnfo">
+		</a>
+  	</p>
 </div>
 
 ###### [GitHub](https://github.com/xAzz) | [Discord](https://discord.gg/wB3P92h)
@@ -37,6 +47,8 @@ const Krunker = new KrunkerJS();
 Krunker.getUser('Helinho').then(data => {
 	// Console log the user stats as an object
 	console.log(data);
+	// [V1.2^ Feature] Gets all stats ready as an object
+	console.log(data.simplified);
 
 	// Convert Player Score to Level
 	Krunker.getLevel(data);
@@ -64,6 +76,8 @@ const Krunker = new KrunkerJS();
 	const user = await Krunker.getUser('Helinho');
 	// Console log the user stats as an object
 	console.log(user);
+	// [V1.2^ Feature] Gets all stats ready as an object
+	console.log(user.simplified);
 })();
 ```
 
