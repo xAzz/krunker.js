@@ -41,25 +41,7 @@ class KrunkerJS extends Server {
 					const data = decode(new Uint8Array(buf.data))[1][2];
 					this.closeSocket();
 					if (!data) return resolve(new Error('User not found'));
-					data.simplified = {
-						name: data.player_name,
-						id: data.player_id,
-						score: data.player_score,
-						level: this.getLevel(data),
-						kills: data.player_kills,
-						deaths: data.player_deaths,
-						kdr: this.getKDR(data),
-						spk: this.getSPK(data),
-						totalGamesPlayed: data.player_games_played,
-						wins: data.player_wins,
-						loses: data.player_games_played - data.player_wins,
-						wl: this.getWL(data),
-						playTime: this.getPlayTime(data),
-						krunkies: data.player_funds,
-						clan: data.player_clan ? data.player_clan : 'No Clan',
-						featured: data.player_featured ? data.player_featured : 'No',
-						hacker: data.player_hack ? data.player_hack : 'No'
-					};
+					data.simplified = this.getSimplified(data);
 					return resolve(data);
 				};
 			} catch (err) {
@@ -108,6 +90,28 @@ class KrunkerJS extends Server {
 		if (!data || typeof data != 'object' || !data.player_score || !data.player_kills) return new Error('You must supply data fetched from user');
 		const SPK = data.player_score / data.player_kills || 0;
 		return SPK.toFixed(2);
+	}
+
+	getSimplified(data) {
+		return {
+			name: data.player_name,
+			id: data.player_id,
+			score: data.player_score,
+			level: this.getLevel(data),
+			kills: data.player_kills,
+			deaths: data.player_deaths,
+			kdr: this.getKDR(data),
+			spk: this.getSPK(data),
+			totalGamesPlayed: data.player_games_played,
+			wins: data.player_wins,
+			loses: data.player_games_played - data.player_wins,
+			wl: this.getWL(data),
+			playTime: this.getPlayTime(data),
+			krunkies: data.player_funds,
+			clan: data.player_clan ? data.player_clan : 'No Clan',
+			featured: data.player_featured ? data.player_featured : 'No',
+			hacker: data.player_hack ? data.player_hack : 'No'
+		};
 	}
 }
 
