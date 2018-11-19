@@ -67,7 +67,7 @@ Krunker.getUser('Helinho').then(data => {
 
 ```js
 // Require the NPM Module
-const KrunkerJS = require('./index.js');
+const KrunkerJS = require('krunker.js');
 // Create a new instance
 const Krunker = new KrunkerJS();
 
