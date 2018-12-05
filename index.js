@@ -25,21 +25,17 @@ class Server {
 }
 
 class KrunkerJS extends Server {
-	constructor() {
-		super();
-	}
-
 	getUser(user) {
 		return new Promise((resolve, reject) => {
-			if (!user) return resolve(new Error('You must supply a username'));
-			if (typeof user != 'string') return resolve(new TypeError('Username must be a string'));
+			if (!user) return reject(new Error('You must supply a username'));
+			if (typeof user !== 'string') return reject(new TypeError('Username must be a string'));
 
 			try {
 				this.getProfile(user);
 				this.ws.onmessage = buf => {
 					const data = decode(new Uint8Array(buf.data))[1][2];
 					this.closeSocket();
-					if (!data) return resolve(new Error('User not found'));
+					if (!data) return reject(new Error('User not found'));
 					data.simplified = this.getSimplified(data);
 					return resolve(data);
 				};
@@ -52,13 +48,13 @@ class KrunkerJS extends Server {
 	}
 
 	getLevel(data) {
-		if (!data || typeof data != 'object' || !data.player_score) return new Error('You must supply data fetched from user');
+		if (!data || typeof data !== 'object' || !data.player_score) return new Error('You must supply data fetched from user');
 		const score = data.player_score;
 		return Math.max(1, Math.floor(0.03 * Math.sqrt(score)));
 	}
 
 	getPlayTime(data) {
-		if (!data || typeof data != 'object' || !data.player_timeplayed) return new Error('You must supply data fetched from user');
+		if (!data || typeof data !== 'object' || !data.player_timeplayed) return new Error('You must supply data fetched from user');
 		const time = data.player_timeplayed;
 		let str = '',
 			days,
@@ -74,19 +70,19 @@ class KrunkerJS extends Server {
 	}
 
 	getKDR(data) {
-		if (!data || typeof data != 'object' || !data.player_kills || !data.player_deaths) return new Error('You must supply data fetched from user');
+		if (!data || typeof data !== 'object' || !data.player_kills || !data.player_deaths) return new Error('You must supply data fetched from user');
 		const KDR = data.player_kills / data.player_deaths || 0;
 		return KDR.toFixed(2);
 	}
 
 	getWL(data) {
-		if (!data || typeof data != 'object' || !data.player_wins || !data.player_games_played) return new Error('You must supply data fetched from user');
+		if (!data || typeof data !== 'object' || !data.player_wins || !data.player_games_played) return new Error('You must supply data fetched from user');
 		const WL = data.player_wins / data.player_games_played || 0;
 		return WL.toFixed(2);
 	}
 
 	getSPK(data) {
-		if (!data || typeof data != 'object' || !data.player_score || !data.player_kills) return new Error('You must supply data fetched from user');
+		if (!data || typeof data !== 'object' || !data.player_score || !data.player_kills) return new Error('You must supply data fetched from user');
 		const SPK = data.player_score / data.player_kills || 0;
 		return SPK.toFixed(2);
 	}
