@@ -1,6 +1,5 @@
 const WebSocket = require('ws');
-const msgpack = require('msgpack-lite');
-const { decode, encode } = msgpack;
+const { decode, encode } = require('msgpack-lite');
 
 class Server {
 	constructor() {
@@ -8,7 +7,7 @@ class Server {
 	}
 
 	connect() {
-		this.ws = new WebSocket(`wss://social.krunker.io:8008/`);
+		this.ws = new WebSocket('wss://social.krunker.io:8008/');
 		this.ws.binaryType = 'arraybuffer';
 	}
 

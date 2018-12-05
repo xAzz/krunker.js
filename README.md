@@ -69,11 +69,11 @@ Krunker.getUser('Helinho').then(data => {
 // Require the NPM Module
 const KrunkerJS = require('krunker.js');
 // Create a new instance
-const Krunker = new KrunkerJS();
+const { getUser } = new KrunkerJS();
 
 (async () => {
 	// Get the stats of the user
-	const user = await Krunker.getUser('Helinho');
+	const user = await getUser('Helinho');
 	// Console log the user stats as an object
 	console.log(user);
 	// [V1.2^ Feature] Gets all stats ready as an object
