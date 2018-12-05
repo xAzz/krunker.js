@@ -56,13 +56,10 @@ class KrunkerJS extends Server {
 	getPlayTime(data) {
 		if (!data || typeof data !== 'object' || !data.player_timeplayed) return new Error('You must supply data fetched from user');
 		const time = data.player_timeplayed;
-		let str = '',
-			days,
-			hours,
-			minutes;
-		minutes = Math.floor(Math.floor(time / 1000) / 60) % 60;
-		hours = Math.floor(Math.floor(Math.floor(time / 1000) / 60) / 60) % 24;
-		days = Math.floor(Math.floor(Math.floor(Math.floor(time / 1000) / 60) / 60) / 24);
+		let str = '';
+		const minutes = Math.floor(Math.floor(time / 1000) / 60) % 60;
+		const hours = Math.floor(Math.floor(Math.floor(time / 1000) / 60) / 60) % 24;
+		const days = Math.floor(Math.floor(Math.floor(Math.floor(time / 1000) / 60) / 60) / 24);
 		if (days) str += `${days}d `;
 		if (hours) str += `${hours}h `;
 		if (minutes) str += `${minutes}m`;
