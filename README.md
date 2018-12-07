@@ -35,7 +35,7 @@ A simple, easy to use module for interacting with the [Krunker.io Social Page](h
 $ npm i krunker.js
 ```
 
-## Example Usage
+## [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based Example Usage
 
 ```js
 // Require the NPM Module
@@ -60,10 +60,10 @@ Krunker.getUser('Helinho').then(data => {
 	Krunker.getWL(data);
 	// Get SPK
 	Krunker.getSPK(data);
-});
+}).catch(console.error);
 ```
 
-## Another Example
+## [async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/await-Based Example
 
 ```js
 // Require the NPM Module
@@ -72,12 +72,16 @@ const KrunkerJS = require('krunker.js');
 const Krunker = new KrunkerJS();
 
 (async () => {
-	// Get the stats of the user
-	const user = await Krunker.getUser('Helinho');
-	// Console log the user stats as an object
-	console.log(user);
-	// [V1.2^ Feature] Gets all stats ready as an object
-	console.log(user.simplified);
+	try {
+		// Get the stats of the user
+		const user = await Krunker.getUser('Helinho');
+		// Console log the user stats as an object
+		console.log(user);
+		// [V1.2^ Feature] Gets all stats ready as an object
+		console.log(user.simplified);
+	} catch (e) {
+		console.error(e);
+	}
 })();
 ```
 
