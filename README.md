@@ -88,4 +88,4 @@ const Krunker = new KrunkerJS();
 ## Help
 
 If you don't understand something in the documentation, you are experiencing problems, or you just need a gentle
-nudge in the right direction, please don't hesitate to join my [Development Server](https://discord.gg/wB3P92h).
+nudge in the right direction, please don't hesitate to join my [Development Server](https://discord.gg/TpGPFXg).
