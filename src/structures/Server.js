@@ -7,7 +7,7 @@ class Server {
 	}
 
 	connect() {
-		this.ws = new WebSocket('wss://social.krunker.io:8008/');
+		this.ws = new WebSocket('wss://krunker_social.krunker.io:443/');
 		this.ws.binaryType = 'arraybuffer';
 	}
 
