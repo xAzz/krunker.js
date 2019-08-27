@@ -1,6 +1,6 @@
 {
 	"name": "krunker.js",
-	"version": "1.2.4",
+	"version": "1.2.5",
 	"description": "Krunker.io Social Page API",
 	"main": "./src/index.js",
 	"scripts": {
