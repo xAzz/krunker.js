@@ -3,11 +3,12 @@ const { encode } = require('msgpack-lite');
 
 class Server {
 	constructor() {
+		this.url = 'wss://krunker_social.krunker.io/ws';
 		this.ws = null;
 	}
 
 	connect() {
-		this.ws = new WebSocket('wss://krunker_social.krunker.io:443/');
+		this.ws = new WebSocket(this.url);
 		this.ws.binaryType = 'arraybuffer';
 	}
 
@@ -20,7 +21,7 @@ class Server {
 
 	getProfile(user) {
 		this.connect();
-		this.ws.onopen = () => this.ws.send(encode(['r', ['profile', user, '', null]]));
+		this.ws.onopen = () => this.ws.send(encode(['r', ['profile', user, '000000', null]]).buffer);
 	}
 }
 
